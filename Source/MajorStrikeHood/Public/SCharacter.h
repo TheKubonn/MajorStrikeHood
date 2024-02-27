@@ -22,13 +22,14 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleAnywhere)
-	TObjectPtr <UCameraComponent> CameraComp;
-
-	UPROPERTY(VisibleAnywhere)
-	TObjectPtr <USpringArmComponent> SpringArmComp;
+	void MoveForward(float Value);
 
 private:	
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr <UCameraComponent> CameraComp;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr <USpringArmComponent> SpringArmComp;
 
 };
