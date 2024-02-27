@@ -23,6 +23,12 @@ protected:
 	virtual void BeginPlay() override;
 
 	void MoveForward(float Value);
+	void MoveRight(float Value);
+
+	void PrimaryAttack();
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf <AActor> ProjectileClass;
 
 private:	
 
